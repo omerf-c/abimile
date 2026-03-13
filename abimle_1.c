@@ -29,7 +29,7 @@ printf("hint:");
 
             }while (strcmp(pin,trupin)!=0);
     printf("welcome");
-
+//
 
 
 return 0;
