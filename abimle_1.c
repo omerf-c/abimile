@@ -1,36 +1,30 @@
 #include <stdio.h>
-#include <string.h>
-#define N 10
-#include <ctype.h>
 
+int main()
+{
+    int i = 0, j = 0;
+    int c;
+    char cumle[80],cumle2[80];
 
-int main() {
+    puts("Bir cumle giriniz: ");
 
-    int i=0,count=0;
-    char trupin[N];
-   const char const pin[N] = "3647549";
-    char *p;
-p=&pin;
+    // Nokta'ya kadar oku
+    while( (c = getchar()) != '.' && c != '\n' && c != EOF )
+        cumle[i++] = c;
 
-printf("hint:");
-   while(*p!='\0') {
-    if (isdigit(p) == 0) {
-        count++;
+    cumle[i] = '\0';
+
+    // Nokta'dan sonra oku
+    if (c == '.') {
+        while( (c = getchar()) != '\n' && c != EOF )
+            cumle2[j++] = c;
     }
-     p++;
-    }
-    printf("your password is %d digits long .\n",count);
+    cumle2[j] = '\0';
 
+    puts("Girilen cumle oncesi:");
+    puts(cumle);
+    puts("Girilen cumle sonrasi:");
+    puts(cumle2);
 
-
-        do {
-            printf("enter your password: ");
-            fgets(trupin,7,stdin);
-
-            }while (strcmp(pin,trupin)!=0);
-    printf("welcome");
-//
-
-
-return 0;
+    return 0;
 }
