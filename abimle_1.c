@@ -1,5 +1,5 @@
-#define _CRT_SECURE_NO_WARNINGS
-/* strcpy, strncpy, strcat, strncat fonksiyonlari */
+
+
 #include <stdio.h>
 #include <string.h>
 int main()
@@ -12,7 +12,7 @@ int main()
 
     strcpy(s3, s1);
     strncpy(s4, s2, 7);
-    s4[7] = '\0';   /* son karaktere \0 degeri ataniyor */
+    s4[7] = '\0';
 
     printf("s1 = %s \n", s1);
     printf("s2 = %s \n", s2);
